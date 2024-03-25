@@ -257,13 +257,50 @@
 </style>
 </head>
 <body>
-    
+
+  <audio id="myAudio" autoplay loop>
+    <source src="D:\music\website\ffx1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
     <div class="phone">
         <div class="notch"></div>
         <div class="screen">
+
+
+              <!-- Music app icon -->
+            <div class="app" id="music">
+              <img src="D:\music\website\music.png" alt="Music">
+            </div>
+            
+
+            <div id="music_content" class="content hidden">
+              <!-- Music app interface will go here -->
+
+              <div class="artwork-container">
+                <img src="HowAboutNow.jpg" alt="Artwork">
+              </div>
+
+            </div>
+
+            <div id="music-player">
+              <img id="play-pause-button" src="D:\music\website\play.png" alt="Play/Pause Button">
+
+              <img id="forward-button" src="D:\music\website\forward.png" alt="Forward Button">
+
+              <img id="back-button" src="D:\music\website\back.png" alt="Back Button">
+              
+          </div>
+
+
+
             <div class="app" id="notes">
                 <img src="notes_icon.png" alt="Notes">
             </div>
+
+
+
             <div id="notes_content" class="content">
                 <!-- Notes content goes here -->
                 <div class="notes">
@@ -346,5 +383,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the audio element
+    const audio = document.getElementById('myAudio');
+  
+    // Play the audio
+    audio.play();
+  });
+  </script>
+
 </body>
 </html>

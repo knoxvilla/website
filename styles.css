@@ -143,6 +143,114 @@ body {
   max-height: 100%; /* Ensure the image does not exceed the button's height */
 }
 
+
+
+/* MUSIC SHIT */
+
+#music {
+  /* Adjust the position to place the Music app icon next to the Notes app icon */
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 80px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+#music_content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+#music_content img {
+  max-width: 80%; /* Adjust the maximum width as needed */
+  max-height: 80%; /* Adjust the maximum height as needed */
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 2.4); /* Adjust the shadow values as needed */
+}
+
+#music-player {
+  position: absolute;
+  bottom: 40px; /* Adjust vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#play-pause-button {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 25px); /* Adjust the value based on the button width */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#forward-button {
+  display: none;
+  position: absolute;
+  bottom: 0; /* Position the forward button at the bottom */
+  left: calc(50% + 80px); /* Position the forward button to the right of the play button */
+  transform: translateX(-50%); /* Adjust horizontally to center the button */
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+#back-button {
+  display: none;
+  position: absolute;
+  bottom: 0; /* Position the back button at the bottom */
+  left: calc(50% - 80px); /* Position the back button to the left of the play button */
+  transform: translateX(-50%); /* Adjust horizontally to center the button */
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(90deg); /* End rotation at 90 degrees */
+  }
+}
+
+/* Apply rotation animation to the play-pause button */
+.rotate-animation {
+  animation-name: rotate; /* Use the defined rotation animation */
+  animation-duration: 0.5s; /* Set animation duration */
+  animation-timing-function: ease; /* Use ease timing function for smooth animation */
+  animation-fill-mode: forwards; /* Keep the button in its final state after animation ends */
+}
+
+.rotate-animation-reverse {
+  animation-name: rotate-reverse;
+  animation-duration: 0.5s; /* Adjust the duration as needed */
+  animation-timing-function: ease; /* Adjust the timing function as needed */
+  animation-fill-mode: forwards; /* Ensure the final state of the animation is maintained */
+}
+
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(90deg); /* Rotate 90 degrees */
+  }
+  to {
+    transform: rotate(0deg); /* Rotate back to 0 degrees */
+  }
+}
+
+
+/* MUSIC SHIT */
+
+
+
 textarea {
   display: block;
   width: 100%;
