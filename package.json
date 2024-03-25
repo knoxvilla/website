@@ -2,11 +2,6 @@
   "name": "male-next-finch",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "parcel-bundler": "^1.6.1"
-  },
-  "scripts": {
-    "build": "parcel index.html"
-  },
+  "scripts": {},
   "devDependencies": {}
 }
