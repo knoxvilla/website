@@ -146,11 +146,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const playPauseButton = document.getElementById('play-pause-button');
     const forwardButton = document.getElementById('forward-button');
     const backButton = document.getElementById('back-button');
+    const songNameElement = document.getElementById('song-name'); // Add this line
     let currentSongIndex = 0;
     const playlist = [
         'ffx1.mp3',
         'How Do You Like Me There.wav',
     ];
+    const songs = [
+        'FFX1',
+        'How Do You Like Me There?',
+    ];
+
+    function updateSongName() {
+        songNameElement.textContent = songs[currentSongIndex];
+    }
 
     playPauseButton.addEventListener('click', function() {
         if (audio.paused) {
@@ -171,13 +180,17 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         audio.src = playlist[currentSongIndex];
         audio.play();
+        updateSongName(); // Update song name when skipping forward
     });
 
     backButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         audio.src = playlist[currentSongIndex];
         audio.play();
+        updateSongName(); // Update song name when skipping backward
     });
+
+    updateSongName(); // Initial song name display
 });
 
 
