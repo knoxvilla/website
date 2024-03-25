@@ -1,162 +1,350 @@
 <!DOCTYPE html>
-<html lang="en"> 
- 
-	<style type="text/css">
-		.fade-in{
-		  -webkit-animation:  2s ease;
-		  -moz-animation:  ease-in-out 2s both;
-		  -ms-animation:  ease-in-out 2s both;
-		  -o-animation:  ease-in-out 2s both;
-		  animation:  2s ease;
-		  visibility: visible;
-		  -webkit-backface-visibility: hidden;
-		}
-	  
-		@-webkit-keyframes {0%{opacity:0;} 100%{opacity:1;}}
-		@-moz-keyframes {0%{opacity:0} 100%{opacity:1}}
-		@-o-keyframes {0%{opacity:0} 100%{opacity:1}}
-		@keyframes {0%{opacity:0} 100%{opacity:1}}
-	  </style>
+    <!-- STOP READING MY MOTHERFUCKING CODE DETECTIVE LOOKIN AHH-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramsey Knox's Phone</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+  .gliding-container {
+    font-size: 36px;
+    color: white;
+    position: relative;
+    overflow: hidden; /* Ensure letters stay within the container */
+    height: 100vh; /* Set the height to fill the viewport */
+    padding-top: 20px; /* Add some space at the top */
+  }
 
-<head> 
-		<link rel="stylesheet" href="style.css">
-		<script src="jquery.min.js"></script>
-		<script src="script.js"></script>
-		<meta name="title" content="Kevin - Official Site"/>
-		<meta name="description" content="The OFFICIAL SITE of Kevin."/>
-		<meta name="keywords" content="Kevin"/>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-		<link rel="shortcut icon" type="image/png" href="favicon.png">
-		<title>Kevin's Desktop</title> 
-		
-	</head> 
+  /* Define the gliding animation for each letter */
+  @keyframes glide-animation {
+    0% {
+      transform: translateY(0%)
+    }
+    100% {
+      transform: translateY(300%);
+      opacity: 0;
+
+    }
+  }
+  /* Define styles for individual letters */
+  .gliding-letter {
+    display: inline-block;
+    position: absolute; /* Position letters absolutely within the container */
+    opacity: 1; /* Ensure the letters are initially visible */
+    animation: glide-animation linear infinite forwards; /* All letters use the same animation */
+    animation-duration: infinite;
+  }
+
+  /* Customize animation durations and positions for individual letters */
+  .gliding-letter:nth-child(1) {
+    top: 250%;
+    left: 5%;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(2) {
+    top: 250%;
+    left: 8%;
+    animation-delay: 2s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(3) {
+    top: 250%;
+    left: 11%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(4) {
+    top: 250%;
+    left: 14%;
+    animation-delay: 4s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(5) {
+    top: 250%;
+    left: 17%;
+    animation-delay: 5s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(6) {
+    top: 250%;
+    left: 20%;
+    animation-delay: 9s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(7) {
+    top: 250%;
+    left: 23%;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(8) {
+    top: 250%;
+    left: 26%;
+    animation-delay: 4s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(9) {
+    top: 250%;
+    left: 29%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(10) {
+    top: 250%;
+    left: 32%;
+    animation-delay: 2s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(11) {
+    top: 250%;
+    left: 35%;
+    animation-delay: 0s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(12) {
+    top: 250%;
+    left: 38%;
+    animation-delay: 5s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(13) {
+    top: 250%;
+    left: 41%;
+    animation-delay: 6s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(14) {
+    top: 250%;
+    left: 44%;
+    animation-delay: 0s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(15) {
+    top: 250%;
+    left: 47%;
+    animation-delay: 6s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(16) {
+    top: 250%;
+    left: 50%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(17) {
+    top: 250%;
+    left: 53%;
+    animation-delay: 7s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(18) {
+    top: 250%;
+    left: 56%;
+    animation-delay: 4s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(19) {
+    top: 250%;
+    left: 59%;
+    animation-delay: 0s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(20) {
+    top: 250%;
+    left: 62%;
+    animation-delay: 0.5s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(21) {
+    top: 250%;
+    left: 65%;
+    animation-delay: 5s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(22) {
+    top: 250%;
+    left: 68%;
+    animation-delay: 9s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(23) {
+    top: 250%;
+    left:  71%;
+    animation-delay: 6s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(24) {
+    top: 250%;
+    left: 74%;
+    animation-delay: 4s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(25) {
+    top: 250%;
+    left: 77%;
+    animation-delay: 2s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(26) {
+    top: 250%;
+    left: 80%;
+    animation-delay: 2s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(27) {
+    top: 250%;
+    left: 83%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(28) {
+    top: 250%;
+    left: 86%;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(29) {
+    top: 260%;
+    left: 5%;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(30) {
+    top: 260%;
+    left: 8%;
+    animation-delay: 0s;
+    animation-duration: 30s;
+  }
+
+  .gliding-letter:nth-child(31) {
+    top: 260%;
+    left: 11%;
+    animation-delay: 1s;
+    animation-duration: 30s;
+  }
+  .gliding-letter:nth-child(32) {
+    top: 260%;
+    left: 14%;
+    animation-delay: 0s;
+    animation-duration: 30s;
+  }
+
+</style>
+</head>
 <body>
-	<!--
-		For the icons below, we're pulling svgs and images from online. If you want them to load faster, you could just store the svgs and pngs in a file on your host server.
-		If you want to continue using the icons as is where we use image urls as the src, then you might have to update the links every so often in case they get taken down.
-	-->
-	<div class="icon ">
-		<a href=""><img class="icon " src="https://vignette.wikia.nocookie.net/the-microsoft-windows-xp/images/f/f9/XPIcon.png/revision/latest/top-crop/width/300/height/300?cb=20191129153941"></a><br />
-		My Computer
+    
+    <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+            <div class="app" id="notes">
+                <img src="notes_icon.png" alt="Notes">
+            </div>
+            <div id="notes_content" class="content">
+                <!-- Notes content goes here -->
+                <div class="notes">
+                    <h1>An event to bestow your eyes upon.</h1>
+                    <p>-24 March, 2024.-</p>
+                    <p>There seems to be some salt in the air. And I'm not even near the ocean. Usually my dreams are pretty clear. I have a lot of questions. </p>
+                    <p>
+                        <span class="gliding-letter">S</span>
+                        <span class="gliding-letter">o</span>
+                        <span class="gliding-letter">m</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">t</span>
+                        <span class="gliding-letter">i</span>
+                        <span class="gliding-letter">m</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">s</span>
+                        <span class="gliding-letter">&nbsp;</span>
+                        <span class="gliding-letter">M</span>
+                        <span class="gliding-letter">o</span>
+                        <span class="gliding-letter">r</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">,</span>
+                        <span class="gliding-letter">&nbsp;</span>
+                        <span class="gliding-letter">O</span>
+                        <span class="gliding-letter">f</span>
+                        <span class="gliding-letter">t</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">n</span>
+                        <span class="gliding-letter">&nbsp;</span>
+                        <span class="gliding-letter">T</span>
+                        <span class="gliding-letter">i</span>
+                        <span class="gliding-letter">m</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">s</span>
+                        <span class="gliding-letter">&nbsp;</span>
+                        <span class="gliding-letter">L</span>
+                        <span class="gliding-letter">e</span>
+                        <span class="gliding-letter">s</span>
+                        <span class="gliding-letter">s</span>
+                      </p>   
+                </div>
+            </div>
+            <button id="back_button">
+                <img src="backicon.png" alt="Back button">
+            </button>
+        </div>
+        <div class="keyboard">
+            <!-- Keyboard buttons will go here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    <a href="https://instagram.com/pndrsa">
+    <img id="pnd" src="pnd.jpg" alt="pndspin">
+    </a>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.gliding-container');
+  const letters = container.querySelectorAll('.gliding-letter');
 
-	</div>
+  // Get the Y coordinate at which letters should become invisible
+  const invisibleY = window.innerHeight * 0.9; // Adjust this value as needed
 
-	<div class="icon ">
-		<a href=""><img class="icon " src="img/task-manager-taskmgr-icon-big.png"></a><br />
-		Task Manager
-	</div>
+  // Check the position of each letter and hide it if it passes the invisibleY
+  letters.forEach(letter => {
+    const letterY = letter.getBoundingClientRect().top + window.scrollY;
+    if (letterY >= invisibleY) {
+      letter.style.visibility = 'hidden';
+    }
+  });
 
-	<div class="icon ">
-		<a href=""><img class="icon " src="https://icons.iconarchive.com/icons/dtafalonso/modern-xp/512/ModernXP-76-Trash-Full-icon.png"></a><br />
-		Windows XP
-	</div>
-	<div class="icon">
-		<a href=""><img class="shortcut " src="img/Shortcut.png"><img class="icon " src="https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Desktop-Windows-icon.png"></a><br />
-		Desktop (Reload)
-	</div>
-
-	<br />
-	<div class="icon ">
-		<a href="https://www.youtube.com"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/YT.png"></a><br />
-		YouTube
-	</div>
-
-	<div class="icon ">
-		<a href="https://discord.gg/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://www.svgrepo.com/show/331368/discord-v2.svg"></a><br />
-		Discord
-	</div>
-	<div class="icon ">
-		<a href="mailto:youremailhere@gmail.com"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://www.freepngimg.com/thumb/gmail/66551-suite-logo-google-email-gmail-free-transparent-image-hd.png"></a><br />
-		Email Me
-	</div>
-
-	<br />
-	<div class="icon ">
-		<a href="https://www.twitch.tv/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/TWITCH.png"></a><br />
-		Twitch
-	</div>
-	<div class="icon ">
-		<a href="https://steamcommunity.com/id/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png"></a><br />
-		Steam Profile
-	</div>
-	<div class="icon ">
-		<a href="https://steamcommunity.com/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png"></a><br />
-		Steam Trade URL
-	</div>
-	<div class="icon ">
-		<a href="https://open.spotify.com/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://icons.veryicon.com/png/o/internet--web/social-icon/social-spotify.png"></a><br />
-		Spotify
-	</div>
-	<br />
-
-	<div class="icon ">
-		<a href="https://twitter.com/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/TWITTER.png"></a><br />
-		Twitter
-	</div>
-
-	<div class="icon ">
-		<a href="https://paypal.me/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/STAR.png"></a><br />
-		DONATE
-	</div>
-	<div class="icon ">
-		<a href="https://github.com/Kevin-Kwan"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://icon-library.com/images/github-icon-png/github-icon-png-15.jpg"></a><br />
-		GitHub
-	</div>
-	<br />
-	<!--Here, I demonstrate the usage of blank icons to serve as spacing.-->
-	<div class="icon ">
-		<a href=""><img class="icon " src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png"></a><br />
-
-	</div>
-	<div class="icon ">
-		<a href=""><img class="icon " src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png"></a><br />
-
-	</div>
-	<!--You can also redirect to other pages on the same server.-->
-	<div class="icon ">
-		<a href="ArentYouCurious.html"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/x.png"></a><br />
-		Curious?
-	</div>
-
-	<div class="icon ">
-		<a href="https://www.youtube.com/watch?v=nSZjfI0PLew"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/warning.png"></a><br />
-		major forsen alert
-	</div>
-
-	<div class="icon ">
-		<a href="https://www.youtube.com/watch?v=-ZQTl8oeJkE"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/CD.png"></a><br />
-		awesome video #1
-	</div>
-
-	<div class="icon ">
-		<a href="https://www.youtube.com/watch?v=r4uYDNAeM4o"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/CD.png"></a><br />
-		frozen
-	</div>
-
-	<br />
-	<div class="icon ">
-		<a href="https://instagram.com/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="img/IG.png"></a><br />
-		Instagram
-	</div>
-	<div class="icon ">
-		<a href="https://www.snapchat.com/"><img class="shortcut" src="img/Shortcut.png"><img class="icon " src="https://play-lh.googleusercontent.com/KxeSAjPTKliCErbivNiXrd6cTwfbqUJcbSRPe_IBVK_YmwckfMRS1VIHz-5cgT09yMo=w240-h480-rw"></a><br />
-		Snapchat
-	</div>
-	<br />
-	
-	<div class="icon ">
-		<a href="https://www.youtube.com/watch?v=6n3pFFPSlW4"><img class="icon " src="img/FOLDER.png"></a><br />
-		Homework
-	</div>
-	<div class="icon ">
-		<a href="https://www.youtube.com/watch?v=d1YBv2mWll0"><img class="icon " src="img/FOLDER.png"></a><br />
-		Pics of My Crush
-	</div>
-
-
-	<div>
-
-		<audio src="snd/Click.mp3" id="click">
-	</div>
-</body> 	
+  // Listen for scroll events to continuously check the position of letters
+  window.addEventListener('scroll', function() {
+    letters.forEach(letter => {
+      const letterY = letter.getBoundingClientRect().top + window.scrollY;
+      if (letterY >= invisibleY) {
+        letter.style.visibility = 'hidden';
+      }
+    });
+  });
+});
+</script>
+</body>
 </html>
