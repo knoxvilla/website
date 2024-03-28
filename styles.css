@@ -25,7 +25,7 @@ body {
 
 @font-face {
   font-family: 'y2k';
-  src: url('y2k.ttf') format('truetype');
+  src: url('Y2K_analog_legacy.ttf') format('truetype');
 }
 
 #pnd {
@@ -51,7 +51,7 @@ body {
 }
 
 .phone {
-  animation: slideAndFadeIn 1.5s ease-out forwards;
+  animation: slideAndFadeIn 1.0s ease-out forwards;
   background-color: #111;
   border-radius: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -61,6 +61,7 @@ body {
   position: relative; /* Position relative for absolute positioning */
   border: 5px solid #333; /* Add border for the outline effect */
 }
+
 
 @media only screen and (max-device-width: 430px) { /* Target iPhone screen size */
   .phone-design {
@@ -266,7 +267,7 @@ body {
 }
 
 #song-name {
-  font-family: 'y2k'; /* Choose your desired font-family */
+  font-family: 'milker'; /* Choose your desired font-family */
   font-size: 16px; /* Adjust the font size as needed */
   text-align: center; /* Center-align the text */
   margin-top: 12px; /* Adjust the top margin as needed */
@@ -278,6 +279,96 @@ body {
 
 
 
+
+
+/*WELCOME SCREEN*/
+
+#welcome-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111; /* Adjust opacity for desired brightness */
+  opacity: 0.8;
+  z-index: 999; /* Ensure it stays on top */
+  text-align: center; /* Center text content */
+  display: flex; /* Center content vertically */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Vertically center content within the welcome screen */
+  align-items: center; /* Horizontally center content within the welcome screen */
+}
+
+#welcome-screen h1 {
+  font-family: 'Intan';
+  color: rgb(255, 255, 255); /* Text color for the title */
+  font-size: 2em; /* Adjust font size for the title */
+  margin: 0;
+}
+
+#welcome-screen p {
+  color: rgb(0, 0, 0); /* Text color for the message */
+  margin: 1em 0; /* Add some margin for the message */
+}
+
+#enter-button {
+  background-color: #000000; /* Dark blue */
+  color: rgb(255, 255, 255);
+  padding: 10px 20px; /* Adjust padding for desired button size */
+  border: none;
+  border-radius: 50px; /* Make the button oval */
+  cursor: pointer; /* Indicate clickable element */
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#enter-button:hover {
+  background-color: #333333; /* Light blue on hover */
+}
+
+#welcome-screen.fade-out {
+  opacity: 0; /* Fade out to opacity 0 */
+  transition: opacity 0.2s ease-in-out; /* Animation duration and timing */
+}
+
+
+/*MT*/
+@keyframes shake {
+  0% { transform: translateX(-2px); } /* Initial left move */
+  20% { transform: translateX(4px); } /* Right move */
+  40% { transform: translateX(-4px); } /* Back to left */
+  60% { transform: translateX(2px); } /* Slight right move */
+  80% { transform: translateX(-2px); } /* Back to left (final position) */
+  100% { transform: translateX(0px); } /* Reset to original position */
+}
+
+.has-background-image {
+  background-image: url('maintenance.png') !important;
+  background-size: cover !important;
+}
+
+
+/*MT*/
+
+/*WELCOME SCREEN*/
+
+
+
+
+
+
+/*VIDEO*/
+
+#video {
+  /* Adjust the position to place the Music app icon next to the Notes app icon */
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 150px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+
+/*VIDEO*/
 textarea {
   display: block;
   width: 100%;

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('back_button').style.display = 'block'; // Display the back button
         document.getElementById('notes').style.display = 'none'; // Hide the notes app icon
         document.getElementById('music').style.display = 'none'; // Hide the music app icon
+        document.getElementById('video').style.display = 'none'; // Hide the video app icon
         document.getElementById('notes_content').style.display = 'block';
 
         // Delay to allow the slide-up animation to take effect before fading in
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('back_button').style.display = 'none'; // Hide the back button
         document.getElementById('notes').style.display = 'block'; // Display the notes app icon
         document.getElementById('music').style.display = 'block'; // Display the music app icon
+        document.getElementById('video').style.display = 'block'; // Display the video app icon
         document.getElementById('notes_content').style.display = 'none';
 
         // Delay to allow the slide-down animation to take effect before reverting
@@ -84,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('back_button').style.display = 'block'; // Display the back button
         document.getElementById('notes').style.display = 'none'; // Hide the notes app icon
         document.getElementById('music').style.display = 'none'; // Hide the music app icon
+        document.getElementById('video').style.display = 'none'; // Hide the video app icon
         document.getElementById('music_content').style.display = 'block';
         // Delay to allow the slide-up animation to take effect before fading in
         setTimeout(function() {
@@ -124,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('music_content').classList.add('hidden');
         document.getElementById('back_button').style.display = 'none'; // Hide the back button
         document.getElementById('notes').style.display = 'block'; // Display the notes app icon
+        document.getElementById('video').style.display = 'block'; // Display the video app icon
         document.getElementById('music_content').style.display = 'none';
 
         // Hide the play/pause button when exiting the Music app
@@ -197,3 +201,91 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // MUSIC MUSIC MSUIC //
+
+
+
+
+
+// WELCOME SCREEN //
+
+// Get the welcome screen element
+const enterButton = document.getElementById("enter-button");
+const welcomeScreen = document.getElementById("welcome-screen");
+
+enterButton.addEventListener("click", function() {
+  welcomeScreen.classList.add("fade-out"); // Add a class for animation
+
+  // Wait for the animation to finish before removal (optional)
+  welcomeScreen.addEventListener("transitionend", function() {
+    welcomeScreen.remove(); // Remove the element after animation
+  });
+});
+
+
+// WELCOME SCREEN //
+
+
+
+
+
+//MT//
+
+
+  // Flag for maintenance mode
+  let isInMaintenanceMode = true; // Change to 'false' for normal operation
+
+  // Get the necessary elements
+  const passcodeInput = document.getElementById("passcode-input"); // Assuming this element exists
+
+  // Define the correct passcode (replace with your desired code)
+  const correctPasscode = "4541";
+
+  // Function to handle successful passcode entry
+  function handleCorrectPasscode() {
+    welcomeScreen.classList.add("fade-out"); // Add class for animation
+    welcomeScreen.addEventListener("transitionend", function() {
+      welcomeScreen.remove(); // Remove the element after animation
+    });
+  }
+
+  // Function to handle incorrect passcode entry
+  function handleIncorrectPasscode() {
+    passcodeInput.value = ""; // Clear the input after incorrect attempt
+    passcodeInput.style.animation = "shake 0.5s ease-in-out"; // Add shake animation
+    setTimeout(function() {
+      passcodeInput.style.animation = ""; // Remove animation after shake
+    }, 500);
+  }
+
+  // Update enter button and passcode input state based on maintenance mode
+  if (isInMaintenanceMode) {
+    enterButton.disabled = true; // Disable button in maintenance mode
+    passcodeInput.disabled = false; // Enable passcode input
+    passcodeInput.style.display = "block"; // Show passcode input
+    enterButton.style.display = "none"; // Hide enter button
+    document.body.classList.add("has-background-image");
+  } else {
+    enterButton.disabled = false; // Enable button in normal mode
+    passcodeInput.disabled = true; // Disable passcode input
+    passcodeInput.style.display = "none"; // Hide passcode input
+    enterButton.style.display = "block"; // Show enter button
+    document.body.classList.remove("has-background-image");
+  }
+
+  // Check passcode on enter key press (only if in maintenance mode)
+  passcodeInput.addEventListener("keypress", function(event) {
+    if (isInMaintenanceMode && event.key === "Enter") {
+      const enteredPasscode = passcodeInput.value;
+      if (enteredPasscode === correctPasscode) {
+        handleCorrectPasscode();
+      } else {
+        handleIncorrectPasscode();
+      }
+    }
+  });
+
+//MT//
+
+//VIDEO//
+
+//VIDEO//
