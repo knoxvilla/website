@@ -232,7 +232,7 @@ enterButton.addEventListener("click", function() {
 
 
   // Flag for maintenance mode
-  let isInMaintenanceMode = true; // Change to 'false' for normal operation
+  let isInMaintenanceMode = false; // Change to 'false' for normal operation
 
   // Get the necessary elements
   const passcodeInput = document.getElementById("passcode-input"); // Assuming this element exists
@@ -287,5 +287,14 @@ enterButton.addEventListener("click", function() {
 //MT//
 
 //VIDEO//
+
+// Select the video app element
+const videoApp = document.getElementById('video');
+
+// Attach a click event listener
+videoApp.addEventListener('click', function() {
+    // Call the alert function when the video app is clicked
+    alert('Work in progress. Very soon finished.');
+});
 
 //VIDEO//
