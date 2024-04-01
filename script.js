@@ -286,15 +286,200 @@ enterButton.addEventListener("click", function() {
 
 //MT//
 
-//VIDEO//
+//VIDEO CLICK//
 
 // Select the video app element
 const videoApp = document.getElementById('video');
 
-// Attach a click event listener
+// Select the phone element
+const phone = document.querySelector('.phone');
+
+// Attach a click event listener to the video app
 videoApp.addEventListener('click', function() {
-    // Call the alert function when the video app is clicked
-    alert('Work in progress. Very soon finished.');
+    // Rotate the phone by adding the rotate class
+    phone.classList.add('rotate');
 });
 
-//VIDEO//
+videoApp.addEventListener('click', function() {
+  // Enlarge the phone after a delay
+  setTimeout(function() {
+      phone.classList.toggle('enlarge');
+  }, 1000); // Adjust the delay as needed
+});
+//VIDEO CLICK//
+
+//VIDEO VIDEO//
+
+// Function to show the video back button
+function showVideoBackButton() {
+  document.getElementById('video_back_button').classList.remove('hidden');
+}
+
+// Function to hide the video back button
+function hideVideoBackButton() {
+  document.getElementById('video_back_button').classList.add('hidden');
+}
+
+// Function to hide the video content
+function hideVideoContent() {
+  document.getElementById('video_content').classList.add('hidden');
+}
+
+// Function to apply the reverse scale down animation to the phone
+function scaleDownPhone() {
+  // Apply the scale down animation to the phone
+  document.querySelector('.phone').style.animation = 'scaleDown 1s forwards';
+}
+
+// Function to apply the reverse rotate back animation to the phone
+function rotateBackPhone() {
+  // Apply the rotate back animation to the phone
+  document.querySelector('.phone').style.animation = 'rotateBack 1s forwards';
+}
+
+// Function to reset phone element styles and remove reverse animation classes
+function resetPhoneStyles() {
+  const phone = document.querySelector('.phone');
+  phone.style.animation = ''; // Remove inline animation style
+  phone.classList.remove('scaleDown', 'rotateBack'); // Remove reverse animation classes
+}
+
+// Event listener for clicking on the video app icon
+document.getElementById('video').addEventListener('click', function() {
+  // Reset phone element styles
+  resetPhoneStyles();
+
+  // Hide the screen and notch
+  document.querySelector('.screen').style.display = 'none';
+  document.querySelector('.notch').style.display = 'none';
+
+  // Show the video content
+  document.getElementById('video_content').classList.remove('hidden');
+  document.getElementById('video_content').classList.add('rotate');
+  document.getElementById('notes').style.display = 'none'; // Hide the notes app icon
+  document.getElementById('music').style.display = 'none'; // Hide the music app icon
+  document.getElementById('video').style.display = 'none'; // Hide the video app icon
+  
+  // Show the video back button
+  showVideoBackButton();
+});
+
+// Event listener for clicking on the back button
+document.getElementById('video_back_button').addEventListener('click', function() {
+  // Hide the video content and show the app icons
+  document.getElementById('video_content').classList.add('hidden');
+  document.getElementById('notes').style.display = 'block'; // Display the notes app icon
+  document.getElementById('music').style.display = 'block'; // Display the music app icon
+  document.getElementById('video').style.display = 'block'; // Display the video app icon
+  document.querySelector('.notch').style.display = 'block';
+  document.querySelector('.screen').style.display = 'block';
+
+  // Hide the video content
+  hideVideoContent();
+  
+  // Apply the reverse animations to the phone
+  scaleDownPhone();
+  setTimeout(rotateBackPhone, 1000); // Adjust the delay as needed to match the duration of the scale down animation
+});
+
+// Event listener to trigger showing the video back button
+document.getElementById('video').addEventListener('click', function() {
+  // Reset phone element styles
+  resetPhoneStyles();
+
+  // Hide the screen and notch
+  document.querySelector('.screen').style.display = 'none';
+  document.querySelector('.notch').style.display = 'none';
+
+  // Show the video back button
+  showVideoBackButton();
+});
+
+
+
+// Event listener for clicking on the video app icon
+document.getElementById('video').addEventListener('click', function() {
+
+  document.getElementById('video_back_button').style.display = 'block';
+
+  document.querySelector('.phone').classList.add('fade-to-black');
+
+
+  // Show the video content with opacity animation after a delay
+  setTimeout(function() {
+    document.getElementById('video_content').style.transition = 'opacity 1s'; // Apply transition
+    document.getElementById('video_content').style.opacity = '1'; // Set opacity to 1
+  }, 1000); // Adjust the delay as needed
+
+  // Reset the video content visibility and opacity
+  document.getElementById('video_content').style.display = 'block';
+  document.getElementById('video_content').style.opacity = '0'; // Set initial opacity to 0
+
+});
+
+
+// Event listener for clicking the back button
+document.getElementById('video_back_button').addEventListener('click', function() {
+
+  document.getElementById('video_back_button').style.display = 'none';
+
+  // Fade out the video content smoothly
+  document.getElementById('video_content').style.transition = 'opacity 1s'; // Apply transition
+  document.getElementById('video_content').style.opacity = '0'; // Set opacity to 0
+
+  // Hide the video content after the fade out animation completes
+  setTimeout(function() {
+    document.getElementById('video_content').style.display = 'none';
+  }, 1000); // Adjust the delay as needed to match the duration of the fade out animation
+
+  // Remove the fade to black from the phone after the fade out animation completes
+  setTimeout(function() {
+    document.querySelector('.phone').classList.remove('fade-to-black');
+    
+  }, 1000)
+
+  // Turn off the screen and notch after a delay
+  setTimeout(function() {
+    document.querySelector('.notch').style.display = 'none';
+    document.querySelector('.screen').style.display = 'none';
+  }, 0); // Adjust the delay as needed to match the duration of the fade out animation
+
+  // Turn on the screen and notch after a delay
+  setTimeout(function() {
+    document.querySelector('.notch').style.display = 'block';
+    document.querySelector('.screen').style.display = 'block';
+
+  }, 2000); // Adjust the delay as needed to match the duration of the fade out animation + additional delay
+});
+
+
+
+
+// Function to reset the interface after animation
+function resetInterface() {
+  // Remove animation classes from the phone
+  document.querySelector('.phone').classList.remove('rotate', 'enlarge', 'scaleDown', 'rotateBack');
+
+  // Show the screen and notch
+  document.querySelector('.screen').style.display = 'block';
+  document.querySelector('.notch').style.display = 'block';
+
+  // Hide the video content
+  document.getElementById('video_content').classList.add('hidden');
+}
+
+// Event listener for animation end to reset interface
+document.querySelector('.phone').addEventListener('animationend', function(event) {
+  // Check if the animation ended is rotateBack
+  if (event.animationName === 'rotateBack') {
+    // Reset the interface
+    resetInterface();
+  }
+});
+
+
+
+
+
+
+//VIDEO VIDEO//

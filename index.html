@@ -32,7 +32,7 @@
     display: inline-block;
     position: absolute; /* Position letters absolutely within the container */
     opacity: 1; /* Ensure the letters are initially visible */
-    animation: glide-animation linear infinite forwards; /* All letters use the same animation */
+    animation: glide-animation linear forwards; /* All letters use the same animation */
     animation-duration: infinite;
   }
 
@@ -263,6 +263,9 @@
     Your browser does not support the audio element.
 </audio>
 
+<button id="video_back_button" class="hidden">
+  <img src="vbb.png" alt="Back Button">
+</button>
 
     <div class="phone">
 
@@ -272,6 +275,12 @@
         <input type="password" id="passcode-input" maxlength="4">
         <button id="enter-button">Enter</button>
       </div>
+
+
+      <div id="video_content" class="hidden">
+        <iframe id="youtube_player" width="600" height="300" src="https://www.youtube.com/embed/fUQTVDs0EaA?si=UTw-qIezXE3OPN5U" frameborder="0" allowfullscreen></iframe>
+    </div>
+
 
         <div class="notch"></div>
         <div class="screen">
@@ -319,9 +328,8 @@
                 <div class="notes">
                     <h1>An event to bestow your eyes upon.</h1>
                     <p>-28 March, 2024.-</p>
-                    <p>----------------------------------------------------------------------</p>
                     <p>chapter 1: ...How About Now?</p>
-                    <p>3 chapters to prepare you for the <span style="color: rgb(255, 136, 0);">event.</span> This could be it. I can feel it.</p>
+                    <p>3 chapters to prepare you for the event. This could be it.</p>
                     <p>
                         <span class="gliding-letter">S</span>
                         <span class="gliding-letter">o</span>
