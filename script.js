@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.phone').style.transition = 'background-color 0.5s ease';
         document.querySelector('.keyboard').style.transition = 'background-color 0.5s ease';
         
-        document.querySelector('.screen').style.backgroundColor = '#222';
-        document.querySelector('.phone').style.backgroundColor = '#222';
-        document.querySelector('.keyboard').style.backgroundColor = '#222';
+        document.querySelector('.screen').style.backgroundColor = '#112';
+        document.querySelector('.phone').style.backgroundColor = '#112';
+        document.querySelector('.keyboard').style.backgroundColor = '#112';
         document.getElementById('music_content').classList.remove('hidden');
         document.getElementById('back_button').style.display = 'block'; // Display the back button
         document.getElementById('notes').style.display = 'none'; // Hide the notes app icon
@@ -155,10 +155,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const playlist = [
         'ffx1.mp3',
         'How Do You Like Me There.wav',
+        'DVD (demo).wav',
+        'love on the terrace (demo, 2021).wav',
     ];
     const songs = [
         'FFX1',
         'How Do You Like Me There?',
+        'DVD (demo, 2023)',
+        'love on the terrace. (demo, 2021)',
     ];
 
     function updateSongName() {
@@ -232,7 +236,7 @@ enterButton.addEventListener("click", function() {
 
 
   // Flag for maintenance mode
-  let isInMaintenanceMode = true; // Change to 'false' for normal operation
+  let isInMaintenanceMode = false; // Change to 'false' for normal operation
 
   // Get the necessary elements
   const passcodeInput = document.getElementById("passcode-input"); // Assuming this element exists
@@ -436,7 +440,7 @@ document.getElementById('video_back_button').addEventListener('click', function(
   setTimeout(function() {
     document.querySelector('.phone').classList.remove('fade-to-black');
     
-  }, 1000)
+  }, 1000);
 
   // Turn off the screen and notch after a delay
   setTimeout(function() {
@@ -479,7 +483,46 @@ document.querySelector('.phone').addEventListener('animationend', function(event
 
 
 
-
-
-
 //VIDEO VIDEO//
+
+
+// Get reference to the audio element
+const buttonSound = document.getElementById('buttonSound');
+
+// Set the volume level (between 0 and 1)
+buttonSound.volume = 0.3; // Adjust the volume as needed
+
+
+// Add event listener to the enter button
+enterButton.addEventListener('click', function() {
+  // Play the button sound
+  buttonSound.play();
+});
+
+
+//EGG//
+
+// Get reference to the "knox." text element by its ID
+const knoxText = document.getElementById('knox-text');
+
+// Variable to keep track of the number of clicks
+let clickCount = 0;
+
+// Event listener for clicking on the "knox." text
+knoxText.addEventListener('click', function() {
+  // Increment the click count
+  clickCount++;
+
+  // Check if the click count is 10
+  if (clickCount === 5) {
+    // Open a new tab in the browser
+    window.open('https://www.youtube.com/watch?v=tYf4pOZdWvQ', '_blank');
+
+    // Reset the click count for future clicks
+    clickCount = 0;
+  }
+});
+
+
+
+//EGG//

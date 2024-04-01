@@ -33,22 +33,31 @@ body {
   src: url('Y2K_analog_legacy.ttf') format('truetype');
 }
 
+.container {
+  position: relative; /* Establish positioning context */
+}
+
 p {
   position: absolute;
   color: white;
   font-family: 'typewriter';
   font-size: 18px;
-  top: 20px;
-  left: 30px;
 }
 
-p1 {
-  position: absolute;
-  color: white;
-  font-family: 'typewriter';
-  font-size: 18px;
-  top: 60px;
-  left: 30px;
+p.p0 {
+  top: -450px;
+  left: -780px;
+  cursor: pointer;
+}
+
+p.p1 {
+  top: -430px;
+  left: -780px;
+}
+
+p.p2 {
+  top: -410px;
+  left: -780px;
 }
 
 #pnd {
@@ -292,6 +301,21 @@ p1 {
   line-height: 1.2; /* Set the line height for better readability */
 }
 
+.notes h1, .notes p4 {
+  display: block; /* Display headings and paragraphs as blocks */
+  margin-bottom: 10px; /* Add bottom margin between elements */
+}
+
+.notes p41 {
+  display: block; /* Display headings and paragraphs as blocks */
+  margin-bottom: 5px; /* Add bottom margin between elements */
+  padding-top: 310px;
+}
+
+.notes p42 {
+  display: block; /* Display headings and paragraphs as blocks */
+}
+
 #back_button {
   display: none; /* Initially hide the back button */
   position: absolute;
@@ -521,6 +545,7 @@ p1 {
 
 
 /*VIDEO*/
+
 textarea {
   display: block;
   width: 100%;
@@ -531,3 +556,31 @@ textarea {
   border-radius: 5px;
   resize: none; /* Prevent users from resizing the textarea */
 }
+
+
+/*TWINKLE*/
+
+.starry-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+}
+
+.star:nth-child(1) {
+  top: 20%;
+  left: 25%;
+}
+
+/*TWINKLE*/

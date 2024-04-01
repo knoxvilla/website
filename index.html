@@ -1,265 +1,25 @@
 <!DOCTYPE html>
-    <!-- STOP READING MY MOTHERFUCKING CODE DETECTIVE LOOKIN AHH-->
+    <!--Mf you ain't clever stop looking here lmfaoooo-->
+    <!--but aye theres an easter egg on the website, click 5 times on something and it'll appear ;^) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramsey Knox's Phone</title>
     <link rel="stylesheet" href="styles.css">
-<style>
-  .gliding-container {
-    font-size: 36px;
-    color: white;
-    position: relative;
-    overflow: hidden; /* Ensure letters stay within the container */
-    height: 100vh; /* Set the height to fill the viewport */
-    padding-top: 20px; /* Add some space at the top */
-  }
-
-  /* Define the gliding animation for each letter */
-  @keyframes glide-animation {
-    0% {
-      transform: translateY(0%)
-    }
-    100% {
-      transform: translateY(300%);
-      opacity: 0;
-
-    }
-  }
-  /* Define styles for individual letters */
-  .gliding-letter {
-    display: inline-block;
-    position: absolute; /* Position letters absolutely within the container */
-    opacity: 1; /* Ensure the letters are initially visible */
-    animation: glide-animation linear forwards; /* All letters use the same animation */
-    animation-duration: infinite;
-  }
-
-  /* Customize animation durations and positions for individual letters */
-  .gliding-letter:nth-child(1) {
-    top: 220%;
-    left: 5%;
-    animation-delay: 1s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(2) {
-    top: 220%;
-    left: 8%;
-    animation-delay: 2s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(3) {
-    top: 220%;
-    left: 11%;
-    animation-delay: 3s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(4) {
-    top: 220%;
-    left: 14%;
-    animation-delay: 4s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(5) {
-    top: 220%;
-    left: 17%;
-    animation-delay: 5s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(6) {
-    top: 220%;
-    left: 20%;
-    animation-delay: 9s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(7) {
-    top: 220%;
-    left: 23%;
-    animation-delay: 1s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(8) {
-    top: 220%;
-    left: 26%;
-    animation-delay: 4s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(9) {
-    top: 220%;
-    left: 29%;
-    animation-delay: 3s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(10) {
-    top: 220%;
-    left: 32%;
-    animation-delay: 2s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(11) {
-    top: 220%;
-    left: 35%;
-    animation-delay: 0s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(12) {
-    top: 220%;
-    left: 38%;
-    animation-delay: 5s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(13) {
-    top: 220%;
-    left: 41%;
-    animation-delay: 6s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(14) {
-    top: 220%;
-    left: 44%;
-    animation-delay: 0s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(15) {
-    top: 220%;
-    left: 47%;
-    animation-delay: 6s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(16) {
-    top: 220%;
-    left: 50%;
-    animation-delay: 3s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(17) {
-    top: 220%;
-    left: 53%;
-    animation-delay: 7s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(18) {
-    top: 220%;
-    left: 56%;
-    animation-delay: 4s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(19) {
-    top: 220%;
-    left: 59%;
-    animation-delay: 0s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(20) {
-    top: 220%;
-    left: 62%;
-    animation-delay: 0.5s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(21) {
-    top: 220%;
-    left: 65%;
-    animation-delay: 5s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(22) {
-    top: 220%;
-    left: 68%;
-    animation-delay: 9s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(23) {
-    top: 220%;
-    left:  71%;
-    animation-delay: 6s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(24) {
-    top: 220%;
-    left: 74%;
-    animation-delay: 4s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(25) {
-    top: 220%;
-    left: 77%;
-    animation-delay: 2s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(26) {
-    top: 220%;
-    left: 80%;
-    animation-delay: 2s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(27) {
-    top: 220%;
-    left: 83%;
-    animation-delay: 3s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(28) {
-    top: 220%;
-    left: 86%;
-    animation-delay: 1s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(29) {
-    top: 230%;
-    left: 5%;
-    animation-delay: 1s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(30) {
-    top: 230%;
-    left: 8%;
-    animation-delay: 0s;
-    animation-duration: 30s;
-  }
-
-  .gliding-letter:nth-child(31) {
-    top: 230%;
-    left: 11%;
-    animation-delay: 1s;
-    animation-duration: 30s;
-  }
-  .gliding-letter:nth-child(32) {
-    top: 230%;
-    left: 14%;
-    animation-delay: 0s;
-    animation-duration: 30s;
-  }
-
-</style>
 </head>
 <body>
 
-  <p>knox.</p>
-  <p1>ver 0.5.</p1>
+
+  <audio id="buttonSound" src="enterbutton.wav"></audio>
+
+  <div class="container">
+    <p id="knox-text" class="p0">knox.</p>
+    <p class="p1">ver 0.5</p>
+    <p class="p2">work in progress.</p>
+
+  </div>
+
   <audio id="myAudio" autoplay loop>
     <source src="ffx1.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -279,7 +39,7 @@
 
 
       <div id="video_content" class="hidden">
-        <iframe id="youtube_player" width="600" height="300" src="https://www.youtube.com/embed/fUQTVDs0EaA?si=UTw-qIezXE3OPN5U" frameborder="0" allowfullscreen></iframe>
+        <iframe id="youtube_player" width="600" height="300" src="https://www.youtube.com/embed/qs_jV_9RxUI?si=ewIEVJY49YtPx_Qq" frameborder="0" allowfullscreen></iframe>
     </div>
 
 
@@ -328,44 +88,13 @@
                 <!-- Notes content goes here -->
                 <div class="notes">
                     <h1>An event to bestow your eyes upon.</h1>
-                    <p>-28 March, 2024.-</p>
-                    <p>chapter 1: ...How About Now?</p>
-                    <p>3 chapters to prepare you for the event. This could be it.</p>
-                    <p>
-                        <span class="gliding-letter">S</span>
-                        <span class="gliding-letter">o</span>
-                        <span class="gliding-letter">m</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">t</span>
-                        <span class="gliding-letter">i</span>
-                        <span class="gliding-letter">m</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">s</span>
-                        <span class="gliding-letter">&nbsp;</span>
-                        <span class="gliding-letter">M</span>
-                        <span class="gliding-letter">o</span>
-                        <span class="gliding-letter">r</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">,</span>
-                        <span class="gliding-letter">&nbsp;</span>
-                        <span class="gliding-letter">O</span>
-                        <span class="gliding-letter">f</span>
-                        <span class="gliding-letter">t</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">n</span>
-                        <span class="gliding-letter">&nbsp;</span>
-                        <span class="gliding-letter">T</span>
-                        <span class="gliding-letter">i</span>
-                        <span class="gliding-letter">m</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">s</span>
-                        <span class="gliding-letter">&nbsp;</span>
-                        <span class="gliding-letter">L</span>
-                        <span class="gliding-letter">e</span>
-                        <span class="gliding-letter">s</span>
-                        <span class="gliding-letter">s</span>
-                      </p>   
+                    <p4>-28 March, 2024.-</p4>
+                    <p4>chapter 1: ...How About Now?</p4>
+                    <p4>3 chapters to prepare you for the event. This could be it.</p4>
+                    <p41>Yours truly,</p41>
+                    <p42>Ramsey Knox.</p42>
                 </div>
+
             </div>
             <button id="back_button">
                 <img src="backicon.png" alt="Back button">
