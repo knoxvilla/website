@@ -5,13 +5,17 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
 }
 
 
 @font-face {
   font-family: 'milker';
   src: url('milker.otf') format('opentype'); 
+}
+
+@font-face {
+  font-family: 'typewriter';
+  src: url('OldNewspaperTypes.ttf') format('truetype'); 
 }
 
 @font-face {
@@ -29,13 +33,31 @@ body {
   src: url('Y2K_analog_legacy.ttf') format('truetype');
 }
 
+p {
+  position: absolute;
+  color: white;
+  font-family: 'typewriter';
+  font-size: 18px;
+  top: 20px;
+  left: 30px;
+}
+
+p1 {
+  position: absolute;
+  color: white;
+  font-family: 'typewriter';
+  font-size: 18px;
+  top: 60px;
+  left: 30px;
+}
+
 #pnd {
   cursor: pointer;
-  bottom: -420px;
-  right: -770px;
+  bottom: 10px;
+  right: 10px;
   width: 50px;
   height: 50px;
-  position: relative;
+  position: absolute;
   animation: spin 10s linear infinite;
 }
 
@@ -130,13 +152,18 @@ body {
   /* Other styles... */
 }
 
-
-#video_back_button img {
-  width: 30px !important;/* Adjust the width as needed */
-  height: 30px !important; /* Adjust the height as needed */
+#video_back_button img{
+  width: auto; /* Set the width of the image to auto to maintain aspect ratio */
+  height: auto; /* Set the height of the image to auto to maintain aspect ratio */
+  max-width: 100%; /* Ensure the image does not exceed the button's width */
+  max-height: 100%;
+}
+#video_back_button {
   position: absolute;
-  top: 230px;
-  left: 600px;
+  top: 680px;
+  left: 935px;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
   border: none; /* Remove any border */
   outline: none; /* Remove the default focus outline */
@@ -388,7 +415,10 @@ body {
 }
 
 #song-name {
-  font-family: 'milker'; /* Choose your desired font-family */
+  position: relative;
+  top: 45%;
+  left: 0%;
+  font-family: 'Intan'; /* Choose your desired font-family */
   font-size: 16px; /* Adjust the font size as needed */
   text-align: center; /* Center-align the text */
   margin-top: 12px; /* Adjust the top margin as needed */
@@ -441,6 +471,7 @@ body {
   cursor: pointer; /* Indicate clickable element */
   font-size: 1em;
   font-weight: bold;
+  font-family: 'helvetica';
 }
 
 #enter-button:hover {

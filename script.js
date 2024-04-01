@@ -232,7 +232,7 @@ enterButton.addEventListener("click", function() {
 
 
   // Flag for maintenance mode
-  let isInMaintenanceMode = false; // Change to 'false' for normal operation
+  let isInMaintenanceMode = true; // Change to 'false' for normal operation
 
   // Get the necessary elements
   const passcodeInput = document.getElementById("passcode-input"); // Assuming this element exists
