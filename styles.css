@@ -87,13 +87,14 @@ p.p2 {
   transition: background-color 1s;
   background-color: #111;
   border-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   width: 300px;
   height: 600px;
   overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative; /* Position relative for absolute positioning */
   border: 5px solid #333; /* Add border for the outline effect */
 }
+
 
 /* Define keyframe animation for rotating the phone */
 @keyframes rotatePhone {
@@ -231,6 +232,27 @@ p.p2 {
 
   #pnd {
     display: none !important;
+  }
+
+  .phone {
+    width: 90vw; /* Adjusted width for smaller devices */
+    height: calc(90vw * 2); /* Adjusted height based on aspect ratio */
+    margin-top: 20px; /* Adjust top margin as needed */
+  }
+
+  /* Adjust the video back button styles */
+  #video_back_button {
+    position: absolute;
+    top: 680px;
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust horizontal position */
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none; /* Remove any border */
+    outline: none; /* Remove the default focus outline */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+    display: none; /* Hide the button by default */
   }
 }
 

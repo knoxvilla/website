@@ -310,9 +310,12 @@ videoApp.addEventListener('click', function() {
       phone.classList.toggle('enlarge');
   }, 1000); // Adjust the delay as needed
 });
+
+
 //VIDEO CLICK//
 
 //VIDEO VIDEO//
+
 
 // Function to show the video back button
 function showVideoBackButton() {
@@ -455,6 +458,13 @@ document.getElementById('video_back_button').addEventListener('click', function(
 
   }, 2000); // Adjust the delay as needed to match the duration of the fade out animation + additional delay
 });
+
+
+
+
+
+
+
 
 
 
